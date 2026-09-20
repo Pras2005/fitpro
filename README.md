@@ -1,29 +1,88 @@
-# FitPlan Android App
+# fitpro
 
-This workspace now contains a native Android app in Kotlin using Jetpack Compose and Material 3, based on the `FitPlan-Smart-Workout-Planner.pdf` brief.
+## Table of Contents
 
-## What it does
+- [Deep Dive Description](#deep-dive-description)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation--setup)
+- [Usage / Running Locally](#usage--running-locally)
 
-- Accepts height and weight input
-- Calculates BMI instantly
-- Maps BMI to a body category
-- Recommends a bulk, cut, or maintain strategy
-- Generates a weekly workout split tailored to the category
-- Splits the app into `Home`, `Insights`, and `Plan` screens with bottom navigation
-- Uses a more polished visual style with gradients, layered cards, and stronger section hierarchy
+## Deep Dive Description
 
-## Project structure
+fitpro is a robust software engineering project carefully architected to provide scalable and efficient functionality. This repository implements a collection of code structures and algorithms designed to solve specific domain problems effectively. The architecture emphasizes modularity and maintainability. 
 
-- `app/src/main/java/com/fitplan/app/MainActivity.kt`: main UI and workout-planning logic
-- `app/src/main/java/com/fitplan/app/ui/theme`: Material 3 theme setup
-- `app/src/main/res`: manifest, launcher icon, and Android resources
+The core functionality involves processing inputs, managing state or data persistence, and delivering outputs or serving API endpoints as dictated by the specific modular implementations found within the file tree. By breaking down the logic into distinct modules, the system ensures that each component handles a single responsibility, paving the way for easier testing and future feature expansions.
 
-## Open in Android Studio
+## Project Structure
 
-1. Open `/home/admin/Desktop/mad3` in Android Studio.
-2. Let Android Studio download the Gradle distribution and Android dependencies.
-3. Run the `app` configuration on an emulator or device.
+```text
+fitpro/
+├── .gitignore
+├── FitPlan-Smart-Workout-Planner.pdf
+├── README.md
+├── app
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── java
+│           │   └── com
+│           │       └── fitplan
+│           │           └── app
+│           │               ├── MainActivity.kt
+│           │               └── ui
+│           │                   └── theme
+│           │                       ├── Theme.kt
+│           │                       └── Type.kt
+│           └── res
+│               ├── drawable
+│               │   └── ic_launcher_foreground.xml
+│               ├── mipmap-anydpi-v26
+│               │   ├── ic_launcher.xml
+│               │   └── ic_launcher_round.xml
+│               ├── values
+│               │   ├── colors.xml
+│               │   ├── strings.xml
+│               │   └── themes.xml
+│               └── xml
+│                   ├── backup_rules.xml
+│                   └── data_extraction_rules.xml
+├── build.gradle.kts
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+└── settings.gradle.kts
 
-## Notes
+```
 
-- Local Gradle tooling is not installed in this environment, so the project was scaffolded without executing a full Android build here.
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Appropriate language runtime and build tools for the source files.
+- Git
+
+## Installation & Setup
+
+Follow these step-by-step instructions to get a development environment running:
+
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:Pras2005/fitpro.git
+   cd fitpro
+   ```
+
+4. **Environment Variables:**
+   If there is a `.env.example` file, copy it to `.env` and configure the necessary keys:
+   ```bash
+   cp .env.example .env
+   ```
+
+## Usage / Running Locally
+
+Execute the main application binary or index file according to the framework used.
